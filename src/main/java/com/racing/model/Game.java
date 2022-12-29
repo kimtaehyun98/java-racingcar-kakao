@@ -1,12 +1,12 @@
-package com.racing;
+package com.racing.model;
 
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 
 public class Game {
-    public ArrayList<Car> cars;
-    public int runCount;
+    private ArrayList<Car> cars;
+    private int runCount;
 
     public Game(){
         this.cars = new ArrayList<>();
@@ -75,7 +75,7 @@ public class Game {
         int maxLoc = maxLocation();
         ArrayList<Car> ret = new ArrayList<>();
         for (Car car : this.cars) {
-            ret.add(maxLoc == car.location ? car : null);
+            ret.add(maxLoc == car.getLocation() ? car : null);
         }
         ret.removeIf(Objects::isNull);
         return ret;
@@ -88,7 +88,7 @@ public class Game {
     public int maxLocation() {
         int tmpMax = 0;
         for (Car car : this.cars) {
-            tmpMax = Math.max(tmpMax, car.location);
+            tmpMax = Math.max(tmpMax, car.getLocation());
         }
         return tmpMax;
     }

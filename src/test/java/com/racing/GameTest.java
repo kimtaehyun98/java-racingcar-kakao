@@ -1,11 +1,12 @@
 package com.racing;
 
+import com.racing.model.Car;
+import com.racing.model.Game;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 public class GameTest {
 

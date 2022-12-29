@@ -1,7 +1,7 @@
-package com.racing;
+package com.racing.model;
 
 public class Car {
-    public int location;
+    private int location;
     private String carName;
     public Car(String carName) {
         this.carName = carName;
@@ -36,7 +36,11 @@ public class Car {
         );
     }
 
-    public void printCarName(){
-        System.out.print(this.carName);
+    public String getCarName(){
+        return this.carName;
+    }
+
+    public int getLocation(){
+        return this.location;
     }
 }
